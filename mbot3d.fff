@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<profile name="mbot3d" version="2016-02-14 19:46:41" app="S3D-Software 3.0.0">
+<profile name="mbot3d" version="2016-02-15 20:01:58" app="S3D-Software 3.0.0">
   <baseProfile>Default (modified)</baseProfile>
   <printMaterial>PLA</printMaterial>
   <printQuality>Medium</printQuality>
@@ -7,9 +7,9 @@
   <extruder name="Primary Extruder">
     <toolheadNumber>0</toolheadNumber>
     <diameter>0.35</diameter>
-    <autoWidth>0</autoWidth>
-    <width>0.4</width>
-    <extrusionMultiplier>0.9</extrusionMultiplier>
+    <autoWidth>1</autoWidth>
+    <width>0.42</width>
+    <extrusionMultiplier>1</extrusionMultiplier>
     <useRetract>1</useRetract>
     <retractionDistance>1</retractionDistance>
     <extraRestartDistance>0</extraRestartDistance>
@@ -139,17 +139,17 @@
   <layerChangeGcode></layerChangeGcode>
   <retractionGcode></retractionGcode>
   <toolChangeGcode></toolChangeGcode>
-  <endingGcode>G130 X127 Y127 A127 B127 (Set Stepper motor Vref to defaults),G1 X-100 Y-100 Z0.6 F800,G92 A0,G1 X-80 Y-100 Z0.6 F600 A15,G92 A</endingGcode>
+  <endingGcode>M18 A B(Turn off A and B steppers),G1 Z185 F900,G162 X Y F2000,M18 X Y Z(Turn off steppers after a build),M104 S0 T0,M72 P1  ( Play Ta-Da song ),M73 P100 (end  build progress ),M137 (build end)</endingGcode>
   <createX3G>1</createX3G>
   <celebration>1</celebration>
   <celebrationSong>Take On Me</celebrationSong>
   <createMB5G>0</createMB5G>
   <postProcessing></postProcessing>
-  <defaultSpeed>4000</defaultSpeed>
+  <defaultSpeed>4800</defaultSpeed>
   <outlineUnderspeed>0.5</outlineUnderspeed>
   <solidInfillUnderspeed>0.8</solidInfillUnderspeed>
   <supportUnderspeed>0.8</supportUnderspeed>
-  <rapidXYspeed>4800</rapidXYspeed>
+  <rapidXYspeed>7000</rapidXYspeed>
   <rapidZspeed>1000</rapidZspeed>
   <minBridgingArea>50</minBridgingArea>
   <bridgingExtraInflation>0</bridgingExtraInflation>
@@ -179,11 +179,11 @@
   <toolChangeRetractionSpeed>600</toolChangeRetractionSpeed>
   <allowThinWallGapFill>1</allowThinWallGapFill>
   <thinWallAllowedOverlapPercentage>10</thinWallAllowedOverlapPercentage>
-  <horizontalSizeCompensation>-0.25</horizontalSizeCompensation>
+  <horizontalSizeCompensation>-0.12</horizontalSizeCompensation>
   <autoConfigureMaterial name="PLA">
     <globalExtruderTemperature>230</globalExtruderTemperature>
     <globalBedTemperature>60</globalBedTemperature>
-    <globalExtrusionMultiplier>0.9</globalExtrusionMultiplier>
+    <globalExtrusionMultiplier>1</globalExtrusionMultiplier>
     <fanSpeed>
       <setpoint layer="1" speed="0"/>
       <setpoint layer="2" speed="100"/>
